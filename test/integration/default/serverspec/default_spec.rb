@@ -8,9 +8,9 @@ end
 
 describe file '/etc/openfortivpn/config' do
   it { should be_file }
-  its(:content) { should match(/^host = vpn-gateway$/) }
-  its(:content) { should match(/^port = 8443$/) }
-  its(:content) { should match(/^username = foo$/) }
-  its(:content) { should match(/^password = $/) }
-  its(:content) { should match(/^trusted-cert = e46d4a/) }
+  its(:content) { should match(/^host = encrypted-host$/) }
+  its(:content) { should match(/^port = 1337$/) }
+  its(:content) { should match(/^username = encrypted-username$/) }
+  its(:content) { should match(/^password = encrypted-password$/) }
+  its(:content) { should match(/^trusted-cert = encrypted-trusted-cert/) }
 end

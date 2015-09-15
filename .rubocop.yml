@@ -14,3 +14,5 @@ AllCops:
   Exclude:
     - cookbooks/**/*
     - vendor/**/*
+    - test/integration/data_bags/*
+    - test/integration/encrypted_data_bag_secret

@@ -16,8 +16,27 @@
 # limitations under the License.
 #
 
+config = node['openfortivpn']['config']
+
+if Chef::Config[:solo]
+  Chef::Log.warn('This recipe uses search. Chef Solo does not support search. '\
+                 'openfortivpn will be configured with attributes '\
+                 '(not recommended)!')
+else
+  ssl_secret = Chef::EncryptedDataBagItem.load_secret(
+    Chef::Config['encrypted_data_bag_secret'])
+  begin
+    config = Chef::EncryptedDataBagItem.load('openfortivpn',
+                                             config['data_bag_name'],
+                                             ssl_secret)
+  rescue Net::HTTPServerException
+    Chef::Log.warn("No data bag `#{config['data_bag_name']}` "\
+                   'found for openfortivpn configuration.')
+  end
+end
+
 directory '/etc/openfortivpn'
 template '/etc/openfortivpn/config' do
   source 'config.erb'
-  variables config: node['openfortivpn']['config']
+  variables config: config
 end

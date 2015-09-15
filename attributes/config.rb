@@ -16,9 +16,9 @@
 # limitations under the License.
 #
 
+default['openfortivpn']['config']['data_bag_name'] = 'config'
 default['openfortivpn']['config']['host'] = 'vpn-gateway'
 default['openfortivpn']['config']['port'] = 8443
 default['openfortivpn']['config']['username'] = 'foo'
 default['openfortivpn']['config']['password'] = ''
-default['openfortivpn']['config']['trusted-cert'] =
-  'e46d4aff08ba6914e64daa85bc6112a422fa7ce16631bff0b592a28556f993db'
+default['openfortivpn']['config']['trusted-cert'] = 'e46d4a'

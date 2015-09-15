@@ -23,6 +23,21 @@ Download, build and install openfortivpn from source.
 #### openfortivpn::config
 Setup `/etc/openfortivpn/config` configuration file.
 
+Configuration can be specified with attributes (see below) or data bags.
+Recommended way is to create a data bag named `openfortivpn` and create an encrypted data bag object `config`:
+```
+{
+    "id": "config",
+    "host": "SERVER_HOST",
+    "port": "SERVER_PORT",
+    "username": "YOUR_USERNAME",
+    "password": "YOUR_PASSWORD",
+    "trusted-cert": "YOUR_CERT"
+}
+```
+
+The ID of this data bag object can be changed with `node[openfortivpn][config][data_bag_name]`
+
 ## Attributes
 
 #### openfortivpn::install
@@ -54,6 +69,12 @@ Setup `/etc/openfortivpn/config` configuration file.
     <th>Type</th>
     <th>Description</th>
     <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['openfortivpn']['config']['data_bag_name']</tt></td>
+    <td>String</td>
+    <td>Use this data bag instead of attributes</td>
+    <td><tt>config</tt></td>
   </tr>
   <tr>
     <td><tt>['openfortivpn']['config']['host']</tt></td>

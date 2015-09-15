@@ -1,0 +1,33 @@
+{
+    "id": "config",
+    "host": {
+        "encrypted_data": "Xjs+Cw1pEKGO2sVsrpwUlY7rJoXwyPId5hXzjzmLwTDQ90jb8X+FTPah9GyF\nZ1r3\n",
+        "iv": "x/Oyoaq7SFg8xzUgdGjzNg==\n",
+        "version": 1,
+        "cipher": "aes-256-cbc"
+    },
+    "port": {
+        "encrypted_data": "gJzF/ScZWvd8xXTnrV5zahRmyVvGL6B/HI1v5Fbkjdg=\n",
+        "iv": "ewqv0RObg6pNWy/ZLJlwYA==\n",
+        "version": 1,
+        "cipher": "aes-256-cbc"
+    },
+    "username": {
+        "encrypted_data": "1R7V13rX1LeqITve7RoL2+A8gRmnvNjo0efLK1hI9qEin3yQS/0uf1qNEKPO\nJxyT\n",
+        "iv": "6rzCiNCpnVq1DUGWHKQxTA==\n",
+        "version": 1,
+        "cipher": "aes-256-cbc"
+    },
+    "password": {
+        "encrypted_data": "4PK0zzPIResb5f/cGL2IHu5cXOKChC+jZdEZ3O8OHR1/+Wmy9zQi50MyYaPJ\nBWyU\n",
+        "iv": "1mkvR8gZ5TandYNDveLTEw==\n",
+        "version": 1,
+        "cipher": "aes-256-cbc"
+    },
+    "trusted-cert": {
+        "encrypted_data": "Z9HKlEado/B4v5hlDP+xd1BF4uq8yck5ufqhcJ4aK+Wdty5MBhRMxvVqbuKT\npsXk\n",
+        "iv": "4dU1gsU6hbIQLHwa3xLqbw==\n",
+        "version": 1,
+        "cipher": "aes-256-cbc"
+    }
+}
