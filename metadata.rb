@@ -14,5 +14,5 @@ recipe 'config', 'Configures openfortivpn from attributes or data bags.'
 depends 'apt'
 depends 'build-essential'
 
-supports 'debian', '>= 7'
+supports 'debian', '>= 7.0'
 supports 'ubuntu', '= 14.04'
